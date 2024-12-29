@@ -1,0 +1,34 @@
+CREATE TABLE employees (
+	employee_id INT,
+	first_name VARCHAR(50),
+	last_name VARCHAR(50),
+	hours_pay DECIMAL(5, 2),
+	hire_data DATE
+);
+
+RENAME TABLE employees to employee;
+
+ALTER TABLE employee 
+ADD phone_number VARCHAR(50);
+
+ALTER TABLE employee
+RENAME COLUMN phone_number to nomor_togel;
+
+ALTER TABLE employee
+MODIFY COLUMN nomor_togel VARCHAR(100);
+
+ALTER TABLE employee
+MODIFY COLUMN nomor_togel VARCHAR(100)
+FIRST;
+
+ALTER TABLE employee
+MODIFY COLUMN nomor_togel VARCHAR(100)
+AFTER employee_id;
+
+ALTER TABLE employee
+DROP COLUMN nomor_togel;
+
+SELECT *
+FROM employee:
+
+DROP TABLE employee;
