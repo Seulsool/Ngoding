@@ -1,0 +1,7 @@
+create database indonesia;
+use indonesia;
+alter database indonesia read only = 0;
+drop database indonesia
+
+#jangan lupa default dulu databasenya ygy
+#read only = 0 =no dan read only = 1 = yes
