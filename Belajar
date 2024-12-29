@@ -33,10 +33,19 @@ modify column nomor_togel VARCHAR(100)
 AFTER employee_id;
 
 alter table tiaek
-drop column nomor_togel VARCHAR(100)
-AFTER employee_id;
+drop column nomor_togel 
 
 drop table tiaek;
 
 select *
 from tiaek
+
+insert into tiaek
+values  (1, "Junta", "Morale", 25.00, "2023-01-02"),
+		(2, "Ted", "Bundy", 15.00, "2023-01-03"),
+		(3, "Michael", "Ngawi", 12.50, "2023-01-04"),
+        (4, "Paterick", "Bateman", 12.50, "2023-01-05"),
+        (5, "Dimas", "Ukin", 17.235, "2023-01-06");
+alter table tiaek
+delete from tiaek
+WHERE employee_id = 5;
