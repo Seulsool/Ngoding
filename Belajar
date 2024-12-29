@@ -1,0 +1,42 @@
+# create database
+create database jerembut;
+use jerembut;
+alter database jerembut read only = 0;
+drop database jerembut
+
+# create table
+CREATE TABLE employees (
+	employee_id INT,
+	first_name VARCHAR(50),
+	last_name VARCHAR(50),
+	hours_pay DECIMAL(5, 2),
+	hire_data DATE
+);
+
+rename table employees to tiaek;
+
+alter table tiaek 
+add phone_number VARCHAR(50);
+
+alter table tiaek
+rename column phone_number to nomor_togel;
+
+alter table tiaek
+modify COLUMN nomor_togel VARCHAR(100);
+
+alter table tiaek
+modify column nomor_togel VARCHAR(100)
+first;
+
+alter table tiaek
+modify column nomor_togel VARCHAR(100)
+AFTER employee_id;
+
+alter table tiaek
+drop column nomor_togel VARCHAR(100)
+AFTER employee_id;
+
+drop table tiaek;
+
+select *
+from tiaek
