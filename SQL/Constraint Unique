@@ -1,0 +1,15 @@
+CREATE TABLE products(
+  product_id INT,
+  product_name VARCHAR(50) UNIQUE,
+  price DECIMAL(4, 2)
+);
+
+ALTER TABLE products
+ADD CONSTRAINT UNIQUE(product_name);
+
+INSERT INTO products
+VALUES (101, "Sego Goreng", 4,99),
+       (102, "Gado - Gado", 2.00),
+       (103, "Bakso", 1.85);
+
+#perintah constraint unique tidak akan membuat kolom duplikat
