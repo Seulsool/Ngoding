@@ -1,11 +1,14 @@
 CREATE TABLE products(
   product_id INT,
   product_name VARCHAR(50) UNIQUE,
-  price DECIMAL(4, 2)
+  price DECIMAL(4, 2) NOT NULL
 );
 
 ALTER TABLE products
 ADD CONSTRAINT UNIQUE(product_name);
+
+ALTER TABLE products
+MODIFY price DECIMAL(4, 2) NOT NULL;
 
 INSERT INTO products
 VALUES (101, "Sego Goreng", 4,99),
