@@ -1,0 +1,14 @@
+CREATE TABLE table_date(
+	my_date DATE,
+    my_time TIME,
+    my_datetime DATETIME
+);
+
+INSERT INTO table_date
+VALUES (CURRENT_DATE(), CURRENT_TIME(), NOW())
+	   (CURRENT_DATE()-1, NULL, NULL);
+
+SELECT *
+FROM table_date
+
+DROP TABLE table_date;
